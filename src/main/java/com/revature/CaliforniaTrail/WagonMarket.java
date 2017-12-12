@@ -13,7 +13,7 @@ public class WagonMarket implements ControlEvent {
 		System.out.println("Here you may trade food for ammo or add members to your party");
 		System.out.println("Adding people to your party helps you survive longer but requires more food");
 		while(stay) {
-			System.out.println("Please select an option, trade, add member, or leave?");
+			System.out.println("Please select an option: trade, add person, or leave?");
 			control = sc.nextLine();
 			if(control.equals("q")) {
 				System.out.println("Please wait to leave the camp before quiting the game");
@@ -25,7 +25,7 @@ public class WagonMarket implements ControlEvent {
 				int rounds = Integer.parseInt(num);
 				game.setFood(game.getFood() - rounds * 2);
 				game.setAmmo(game.getAmmo() + rounds);
-			} else if(control.equals("Leave") || control.equals("Leave") || control.equals("l")) {
+			} else if(control.equals("Leave") || control.equals("leave") || control.equals("l")) {
 				stay = false;
 			} else if(control.equals("Add Person") || control.equals("add person") || control.equals("add")) {
 				int ra = (int)(Math.random() * 6);

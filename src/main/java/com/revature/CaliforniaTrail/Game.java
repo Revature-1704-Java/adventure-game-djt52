@@ -31,7 +31,7 @@ public class Game {
 		food = 1000;
 		alv = 4;
 		distanceToGo = 2000;
-		try (FileReader fr = new FileReader("TextArt.txt")) {
+		try (FileReader fr = new FileReader("src/resources/TextArt.txt")) {
 			int i;
 			while((i = fr.read()) != -1) {
 				System.out.print((char) i);
@@ -117,6 +117,7 @@ public class Game {
 		System.out.println(m.getName() + " has died");
 		alv--;
 	}
+	
 	
 	public int getFood() {
 		return food;

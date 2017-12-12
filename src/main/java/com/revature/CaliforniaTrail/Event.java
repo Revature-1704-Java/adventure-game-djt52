@@ -28,8 +28,11 @@ public class Event {
 		int cas = ran + r;
 		Member m;
 		switch(cas) {
-			case 1: System.out.println("A vulture flies away with your youngest");
-				game.died(game.getAlive());
+			case 1: m = game.getParty().get(random.nextInt(game.getAlive()));
+				System.out.println("A vulture flies away with your youngest");
+				game.getParty().remove(m);
+				game.died(m);
+				
 			break;
 			case 2: m = game.getParty().get(random.nextInt(game.getAlive()));
 				System.out.println(m.getName() + " had a particularly bad encounter with bear cubs");
